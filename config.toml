@@ -1,0 +1,20 @@
+title = "Gariany.com"
+enableRobotsTXT = true
+
+# baseURL = "https://www.gariany.com/"
+baseURL = "http://localhost:8002/"
+
+[params]
+  #Favicon for site
+  favicon = "/favicon.ico"
+  
+[permalinks]
+  posts = "/:year/:month/:title/"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[outputs]
+  home = ["HTML", "AMP", "RSS"]
+  page = ["HTML"]

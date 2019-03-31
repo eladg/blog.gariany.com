@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+  {{ $baseUrl := .Site.BaseURL }}
+  
+  <article class="list">
+    <ul class="posts-list">
+      {{ range $index, $element := .Paginator.Pages }}
+        <li class="posts-list-item">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <div>
+            <span class="posts-list-item-description">
+              Published at: {{ .PublishDate.Format "Jan 2, 2006" }}
+              {{ .ReadingTime }} min read
+      
+              posted under:
+
+                {{ range $key, $value := .Params.tags }}
+                  <a class="posts-list-tags" href="{{ $baseUrl }}tags/{{ $key | urlize  }}">#{{ $value | humanize }}</a>
+                {{ end }}
+
+            </span>
+          </div>
+        </li>
+      {{ end }}
+    </ul>
+    {{ partial "pagination.html" $ }}
+  </article>
+
+{{ end }}
