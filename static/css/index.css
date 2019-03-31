@@ -1,0 +1,380 @@
+@font-face {
+  font-family: 'medium-content-title-font';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/fell-400-normal.woff') format('woff');
+  unicode-range: U+0-7F,U+A0,U+200A,U+2014,U+2018,U+2019,U+201C,U+201D,U+2022,U+2026;
+}
+
+@font-face {
+  font-family: 'medium-content-serif-font';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/charter-400-normal.woff') format('woff');
+  unicode-range: U+80-9F,U+A1-2009,U+200B-2013,U+2015-2017,U+201A-201B,U+201E-2021,U+2023-2025,U+2027-10FFFF;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  line-height: 1.42857143;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "medium-content-serif-font", Georgia, Cambria, "Times New Roman", Times, serif;
+
+  text-rendering: optimizelegibility;
+  letter-spacing: 0px;
+  max-width: 740px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1 {
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 34px;
+  margin-top: 56px;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.316667px;
+  line-height: 31.7167px;
+
+}
+
+h6 {
+  font-family: monospace;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 200;
+  color: #aaa;
+}
+
+p, ul, li, a {
+  margin: 0;
+  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 21px;
+}
+
+p {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 38px;
+  max-width: 740px;
+  line-height: 1.58;
+}
+
+p img {
+  margin: 0;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 52px;
+}
+
+/******************************************************************************
+  Layout Classes
+******************************************************************************/
+
+.header {
+  padding-top: 3.5em;
+}
+
+.footer {
+  bottom: 0;
+  position: absolute;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  position: fixed;
+  background: #000000;
+
+  top: 0;
+  left: 0;
+  width: 25em;
+  height: 100%;
+}
+
+.content {
+  display: block;
+  right: 0;
+  width: 100%;
+  margin-left: 27em;
+}
+
+.posts-list {
+  display: inline-grid;
+  list-style-type: none;
+}
+
+.posts-list-item {
+  margin-bottom: 2em;
+}
+
+.posts-list-item a {
+  font-size: 1em;
+}
+
+.posts-list-item-description {
+  color: #bbb;
+  font-family: monospace;
+  font-size: 12px;
+  opacity: 0.8;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.posts-list-item-description a {
+  margin: 0 0.2em;
+  padding: 0px 2px 0px 2px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 1em;
+  text-transform: lowercase;
+}
+
+article {
+  display: block;
+  position: relative;
+
+  max-width: 1032px;
+  min-height: 800px;
+
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 3em;
+  margin-bottom: 9em;
+
+  background-color: #fff;
+}
+
+/*
+  Elements
+*/
+
+.card {
+  color: #4a4a4a;
+  max-width: 100%;
+  position: relative;
+}
+
+.card-header {
+  background-color: transparent;
+  align-items: stretch;
+  box-shadow: 0 1px 2px rgba(10, 10, 10, 0.1);
+  display: flex;
+}
+
+.card-body {
+
+}
+
+/******************************************************************************
+  content design
+******************************************************************************/
+
+/* sidebar */
+
+.header-title {
+  margin-top: 3em;
+  padding: 3em;
+}
+
+.video-background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header-title .title {
+  display: block;
+
+  font-family: "medium-content-serif-font", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 26px;
+  text-align: left;
+  line-height: 39.6px;
+
+  color: #fff;
+  margin-top: 24px;
+}
+
+.header-title .tagline {
+  font-family: monospace;
+  text-align: left;
+ 
+  line-height: 0.88;
+  font-weight: 400;
+  color: #DF2D4F;
+
+  margin-bottom: 2em;
+  margin-top: 0;
+}
+
+.category-list,
+.tags-list {
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 0.5;
+}
+
+/* main content */
+
+.category-list li,
+.tags-list li {
+  list-style-type: none;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 3px;
+  display: inline-block;
+}
+
+.category-list li a,
+.tags-list li a {
+  zoom: 1;
+  color: #fff;
+  font-size: 12px;
+  font-family: monospace;
+  text-decoration: none;  
+}
+
+.category-list li a:hover, li a:focus,
+.tags-list li a:hover, li a:focus {
+  background: rgba(223,45,79,0.3);
+  color: #ffffff;  
+}
+
+img {
+  max-width: 100%;
+}
+
+article img {
+  min-width: 600px;
+}
+
+a:hover,
+a:focus {
+  color: #DF2D4F;
+}
+
+a {
+  color: #000;
+}
+
+.avatar {
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border-width: 3px;
+  border-color: #ffffff;
+  border-style: solid;
+}
+
+blockquote p {
+  border-left-style: solid;
+  border-left-width: 3px;
+  border-left-color: rgba(0,0,0,0.84);
+  padding-left: 14px;
+}
+
+pre {
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ol {
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  .sidebar {
+    position: fixed;
+    background: #000000;
+    top: 0;
+    width: 100%;
+    height: 6em;
+    z-index: 2;
+  }
+
+  .header-title {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-title div {
+    flex: 1;
+  }
+
+  .header-title .category-list li a, 
+  .header-title .tags-list li a {
+    font-size: 24px;
+  }
+
+  .header-title .title {
+    display: none;
+  }
+
+  .header-title .avatar {
+    margin: 0;
+    width: 4em;
+    height: 4em;
+    border-width: 2px;
+  }
+
+  .header-title .tagline {
+    display: none;
+  }
+
+  .header-title .navigation .tags-list {
+    display: none;
+  }
+
+  .content {
+    margin: 0;
+    margin-top: 7em;
+    padding: 1em;
+    min-width: 712px;
+  }
+
+  article img {
+    width: 100%;
+  }  
+}
+
+
+/* On screens that are 600px or less, set the background color to olive */
+
+/*
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+}
+*/
