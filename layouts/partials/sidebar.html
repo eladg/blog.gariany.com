@@ -2,72 +2,117 @@
 
 <div>
 
-
-
+<!-- 
   <video id="video-background" class="video-background" no-controls autoplay loop src="{{ $baseUrl }}background.mp4" poster="{{ $baseUrl }}background.png"></video>
+ -->
 
-  <div class="header-title">
+  <div id="sidebar-background" class="sidebar-background">
     
-    <div>
+  </div>
+ 
+  <div class="header-title">
+
+    {{ if not .IsHome }}
+
+    <div class="avatar-container">
       <a href="{{ $baseUrl }}">
         <img class="avatar" src="{{ $baseUrl }}img/avatar4.png" alt="Avatar">
       </a>
     </div>
 
-    <div>
-      <span class="title">Hey! I'm Elad</span>
+    {{ end }}
+
+    <div class="title-container">
+      {{ if .IsHome }}
+        <span class="title"></span>
+      {{ else }}
+        <span class="title">Elad Gariany</span>
+      {{ end }}
     </div>
 
-    <div>
+    {{ if not .IsHome }}
+
+    <div class="tagline-container">
       <p class="tagline">
-        coder, music producer-arranger, new media artist, entrepreneur
+        Artist and software engineer based in the San Francisco Bay Area.
       </p>
-    </div>
 
-    <div class="navigation">
-      <div class="category-list">
-        {{ range $key, $value := .Site.Taxonomies.categories }}
-          <li><a href="{{ $baseUrl }}categories/{{ $key | urlize  }}">/{{ $key | humanize | lower}}</a></li>
-        {{ end }}
+      <div class="tagline">
+        <p class="sidebar-btn"><a href="/about">About</a></p>
+        <p class="sidebar-btn"><a href="/contact">Contact Me</p>
       </div>
 
-      <div class="tags-list">
-        {{ range $key, $value := .Site.Taxonomies.tags }}
-          <li><a href="{{ $baseUrl }}tags/{{ $key | urlize  }}">#{{ $key | lower }}</a></li>
-        {{ end }}
-      </div>    
     </div>
+
+    {{ end }}
+
+    <div class="navigation-container">
+      <!-- category list -->
+
+      {{ if not .IsHome }}
+        {{ partial "list-categories.html" . }}
+      {{ end }}
+
+      <!-- tags list -->
+      {{ if .IsHome }}
+        {{ partial "list-tags.html" . }}
+      {{ end }}
+    </div>
+
+    {{ partial "list-social.html" . }}
+    
   </div>
 </div>
 
 <script type="text/javascript">
-var kkk = function () {
-  var scaleToFill = function() {
 
-    console.log("in scaleToFill");
+// this is expermental, performance is still not good enough for this to be production ready...
+// var strechAndPlayVideo = function () {
+//   var $video = document.getElementById("video-background");
 
-    var sidebar = document.getElementsByClassName("sidebar")[0];
+//   var scaleToFill = function() {
 
-    var $video = document.getElementById("video-background"),
-      videoRatio = $video.videoWidth / $video.videoHeight,
-      tagRatio = sidebar.offsetWidth / sidebar.offsetHeight,
-      val;
+//     console.log("in scaleToFill");
+
+//     var sidebar = document.getElementsByClassName("sidebar")[0];
+
+//     var videoRatio = $video.videoWidth / $video.videoHeight;
+//     var tagRatio = sidebar.offsetWidth / sidebar.offsetHeight;
+//     var scale;
           
-    if (videoRatio <= tagRatio) {
-       val = tagRatio / videoRatio * 1.02;
-    } else if (tagRatio < videoRatio) {
-       val = videoRatio / tagRatio * 1.02;
-    }
+//     if (videoRatio <= tagRatio) {
+//        scale = tagRatio / videoRatio * 1.02;
+//     } else if (tagRatio < videoRatio) {
+//        scale = videoRatio / tagRatio * 1.02;
+//     }
 
-    $video.style.transform = `scale(1,${val})`;
-  };
-    
-  var video = document.getElementById("video-background");
-  video.onloadeddata = scaleToFill;
-  window.onresize = scaleToFill;
-};
+//     if (sidebar.offsetHeight > sidebar.offsetWidth ) {
+//       $video.style.transform = `scale(1,${scale})`;
+//       $video.style.display = "block";
+//     } else {
+//       $video.style.display = "none";
+//     }
+//   };
 
-kkk();
+//   var canPlay = function() {
+//     $video.pause();
+//     $video.play();
+//   }
 
+//   $video.onloadeddata = scaleToFill;
+//   $video.oncanplaythrough = canPlay;
+  
+//   window.onresize = scaleToFill;
+// };
+
+// strechAndPlayVideo();
+
+window.onscroll = function() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("sidebar-background").className = "sidebar-background sidebar-hide";
+  } else {
+    document.getElementById("sidebar-background").className = "sidebar-background";
+  }  
+}
 
 </script>
