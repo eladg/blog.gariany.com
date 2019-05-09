@@ -1,3 +1,73 @@
 {{- define "main" }} 
 
+  {{ $baseUrl := .Site.BaseURL }}
+
+  <article class="list">
+  
+    <div class="row">
+      <div class="col-xs-5">
+        <a href="{{ $baseUrl }}">
+          <img class="avatar" src="{{ $baseUrl }}img/avatar4.png" alt="Avatar">
+        </a>
+      </div>
+
+      <div class="col-xs-5">
+        <h1 style="margin-top: 0; filter: drop-shadow(1px 0px 5px #AAA);">Hey, I'm Elad.</h1>
+        <h3 style="color: #DF2D4F;">Coder, musician, thinker.</h3>
+        <p class="tagline" style="">
+          Artist and software engineer based in the San Francisco Bay Area.
+        </p>        
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-xs-12">
+        <hr style="margin-top: 3em;">
+
+        {{ partial "list-categories.html" . }}
+      
+        <hr style="margin-bottom: 1em;">
+      </div>
+    </div>
+
+    {{ range .Data.Pages.GroupByDate "2006" -}}
+    
+    <ul class="posts-list">
+      
+      <div class="posts-title site-date-catalog">{{ .Key }}</div>
+
+        {{ range .Pages -}}
+
+          {{ if not .Params.static }}
+
+          <li class="posts-list-item">
+            > <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <div>
+              <span class="posts-list-item-description">
+                Published at: {{ .PublishDate.Format "Jan 2, 2006" }}
+                {{ .ReadingTime }} min read
+
+                {{ if isset .Params "tags" }} 
+
+                  posted under:
+
+                  {{ range $key, $value := .Params.tags }}
+                    <a class="posts-list-tags" href="{{ $baseUrl }}tags/{{ . }}">#{{ $value | humanize }}</a>
+                  {{ end }}
+
+                {{ end }}
+              </span>
+            </div>
+          </li>
+
+          {{ end }}
+
+        {{ end }}
+
+    </ul>
+
+    {{ end }}
+  </article>
+
 {{- end }}

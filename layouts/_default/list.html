@@ -3,27 +3,39 @@
   {{ $baseUrl := .Site.BaseURL }}
   
   <article class="list">
+
+    <div>
+      <div class="posts-title">{{ .Type | humanize }}: {{ .Title | humanize }}</div>
+      <hr style="margin-bottom: 2em;">
+    </div>
+
     <ul class="posts-list">
       {{ range $index, $element := .Paginator.Pages }}
         <li class="posts-list-item">
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
+
+          {{ if (isset .Params "external_url")}}
+            <a href="{{ .Params.external_url }}">{{ .Title }}</a>
+          {{ else }}
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          {{ end }}
+
           <div>
             <span class="posts-list-item-description">
               Published at: {{ .PublishDate.Format "Jan 2, 2006" }}
-              {{ .ReadingTime }} min read
       
               posted under:
 
                 {{ range $key, $value := .Params.tags }}
-                  <a class="posts-list-tags" href="{{ $baseUrl }}tags/{{ $key | urlize  }}">#{{ $value | humanize }}</a>
+                  <a class="posts-list-tags" href="{{ $baseUrl }}tags/{{ . }}">#{{ $value | humanize }}</a>
                 {{ end }}
-
             </span>
           </div>
         </li>
       {{ end }}
     </ul>
+
     {{ partial "pagination.html" $ }}
+    
   </article>
 
 {{ end }}
