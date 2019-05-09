@@ -1,12 +1,12 @@
 ---
-title: "Google Photos and the AI Reality We Live In"
+title: "Google Photos and The AI Reality We Currently Live In"
 date: 2019-03-26T15:47:28+02:00
-categories: ["blog"]
+categories: ["writings"]
 ---
 
-# Google Photos: The AI Reality We Live In
+# Google Photos and The AI Reality We Currently Live In
 
-<figure><img style="width: 600px; display: block; margin: auto;" alt="AI Reality Rabbit Hole" src="https://cdn-images-1.medium.com/max/2400/1*aqwrhYpBrMWMgfi8-YIfQg.png"/></figure>
+{{< figure src="cover.png" title="Humanity in the age of #AIReality" >}}
 
 Back in 2015 Google announced its revolutionary new Photos service named Google Photos. The service offers unlimited data to host your photos. According to [Wikipedia](https://en.wikipedia.org/wiki/Google_Photos), there are over 1.2 billion photos are uploaded to the service every day and this estimation is likely to be an outdated.
 
@@ -19,13 +19,13 @@ Recently, I landed back from a long trip to India. I started organizing my photo
 
 Recently, I landed back from a long trip to India. I started organizing my photos and noticed a few hints to the service's hidden secret.
 
-<figure><img class="special-img-class" alt="Google Photos search offer: Search 'Dharamsala'" src="https://cdn-images-1.medium.com/max/2400/1*4wNxdCIxcIpENpGwFuzCrw.png"/></figure>
+{{< figure src="dharamshala-search.png" title="Google Photos search suggestion">}}
 
 I will consider myself pretty tech-savvy. I write code in Silicon Valley, experienced with big data and dipped my toes in the field of Computer Vision. When the search bar suggested "Dharamshala", a city I visited not awhile ago, I was not surprised at all. The service uses my photos [GPS or EXIF metadata](https://en.wikipedia.org/wiki/Exif), together with a [geo-fence](https://en.wikipedia.org/wiki/Geo-fence) to collect photos taken in the same area. Seems legit and probably helpful.
 
 The service also offers pretty neat organization features for your photo library using the [assistant mode](https://photos.google.com/assistant), which helps users "fix" pictures, generate albums quickly or archive those not so interesting pictures - such as documents. I started to wonder, what data it takes to distinguish a nice photo from a ugly uninteresting picture of a document? and how did google's smart assistant found those documents in my phone photo library? That thing is smart!
 
-<figure><img class="special-img-class" alt="Documents in Google Photos" src="https://cdn-images-1.medium.com/max/2400/1*DuhP6zggdLJ4Qm3gbYhQEw.png"/></figure>
+{{< figure src="documents-search.png" title="Documents in Google Photos" >}}
 
 ## 1 Picture Equals 100,000 Search Indexes
 
@@ -39,21 +39,13 @@ Try it yourself. Take a picture of something very obvious like blue t-shirt and 
 
 Bellow are a couple of breathtakingly accurate results from my own photo library. I encourage you to [try it yourself](https://photos.google.com/u/1/search/street%20sign) using the search feature. If you are a Google Photos user, here are some search ideas: "curly hair", "blue t-shirt", "identification card", "sad", "watercraft", "studio", 🔥 (the fire emoji)
 
-<figure><img class="special-img-class" alt="bar area landmarks search" src="https://cdn-images-1.medium.com/max/2400/1*IQTDh3xZmfxAIgrUQnNBKg.png"/></figure>
+{{< figure src="bayarea-landmarks.png" title="Pictures of landmarks capture in the \"bay area\" (i.e. the San Francisco bay area)" >}}
 
-###### Pictures of landmarks capture in the "bay area" (i.e. the San Francisco bay area)
+{{< figure src="purple-bag-search.png" title="Pictures of bags which are also colored purple" >}}
 
-<figure><img class="special-img-class" alt="purple bag search" src="https://cdn-images-1.medium.com/max/2400/1*4YE6PzUkzGMycmOsYu44Ig.png"/></figure>
+{{< figure src="long-hair-search.png" title="Facial features such as \"long hair\" or \"dark curls\" could be detected" >}}
 
-###### Pictures of bags which are also colored purple
-
-<figure><img class="special-img-class" alt="long hair search" src="https://cdn-images-1.medium.com/max/2400/1*97DSc2R27Brludy4-bzWQQ.png"/></figure>
-
-###### Facial features such as "long hair" or "dark curls" could be detected
-
-<figure><img class="special-img-class" alt="chevrolet search" src="https://cdn-images-1.medium.com/max/2400/1*H8Dzvj8qg4ywBtQwB5HX3w.png"/></figure>
-
-###### By detecting the logo inside the picture, the search returned only pictures with the Chevrolet brand in them
+{{< figure src="chevrolet.png" title="By detecting the logo inside the picture, the search returned only pictures with the Chevrolet brand in them" >}}
 
 ## Deep Understanding, How Does It Works?
 
@@ -76,7 +68,7 @@ High confidence labeling to images results in a narrow and accurate search, but 
 
 This multi level labeling is the true hidden power of Google to **source knowledge** from data. This is how for example Google will distinguish between "food", "truck" and "food truck". In addition, it's extremely likely that the Google Vision service can already today label things as good as the average person can.
 
-<figure><img class="special-img-class" alt="car vs car crash" src="https://cdn-images-1.medium.com/max/2400/1*P4I1yWEaOHqSccTK4lIAyQ.png"/></figure>
+{{< figure src="car-vs-car-crash.png" title="Car vs Car Crash Google Image Search" >}}
 
 ###### Above: pictures labeled "car" below: pictures labeled "car" which are also labeled "crash"
 
@@ -86,13 +78,13 @@ Think for a second of the knowledge exists inside your photo library. Knowledge 
 
 Google makes it super easy for you to try an analyze images yourself on the [Cloud Vision API](https://cloud.google.com/vision/) marketing page.
 
-<figure><img class="special-img-class" alt="drag and drop image to analyze" src="https://cdn-images-1.medium.com/max/2400/1*G5Fek_e2dKjiAxRq01pAWA.png"/></figure>
+{{< figure src="cloud-vision-drag-n-drop.png" title="Google Cloud Vision API - Drag and Drop image to Analyze" >}}
 
 Challenge it with something weird and complex and test yourself how deep the rabbit hole goes. Post it online using the hashtag **#AIreality** so we can all see.
 
 Here are some examples:
 
-<figure><img class="special-img-class" alt="cloud vision analysis examples" src="https://cdn-images-1.medium.com/max/2400/1*Di0IfDiwUTkIWhXLi7egeg.png"/></figure>
+{{< figure src="cloud-vision-results.png" title="Cloud Vision Analysis examples" >}}
 
 ## Final Thoughts or Just How Bad Is This?
 

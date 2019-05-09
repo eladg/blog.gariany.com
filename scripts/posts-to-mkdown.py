@@ -40,11 +40,9 @@ title: "{title}"
 date: "{date}"
 lastmod: "{date}"
 author: "Elad Gariany"
-cover: "/img/cover.jpg"
 tags: {tags}
 categories: [{category}]
 link: "{url}"
-id: {id}
 ---
 
 ## {title}
@@ -55,7 +53,6 @@ id: {id}
     category=json.dumps(p["category"]),
     tags=json.dumps(p["tags"]),
     url=p["url"],
-    id=p["id"]
   )
 
   print(markdown + "\n\n")

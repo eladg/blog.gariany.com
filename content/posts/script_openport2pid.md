@@ -4,12 +4,13 @@ title: "Script: openport2pid"
 date: "2013-02-28T00:00:00Z"
 lastmod: "2013-02-28T00:00:00Z"
 author: "Elad Gariany"
-cover: "/img/cover.jpg"
 tags: ["gist", "bash"]
 categories: ["code"]
 link: "https://github.com/eladg/openport2pid"
-id: a8e5a0c7-f4b8-4e63-9e4a-24dcff866570
 ---
 
 ## Script: openport2pid
 
+Ever wondered which process id is assosiated with an open port on your host? I wrote this little gem a couple of years ago. I use it a lot.
+
+{{< gist eladg 554c6517f3a8abf517e0ede9e16c507b >}}
