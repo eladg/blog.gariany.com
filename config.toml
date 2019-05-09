@@ -2,14 +2,14 @@ title = "Gariany.com"
 enableRobotsTXT = true
 
 # baseURL = "https://www.gariany.com/"
-baseURL = "http://192.168.14.42:8002/"
-# disqusShortname = "Gariany"
+BaseURL = "http://localhost:1313/"
 
 [params]
   #Favicon for site
   favicon = "/favicon.ico"
-  talkyardServerUrl = "https://comments-demo.talkyard.io"
-  
+  talkyardServerUrl = "https://comments-for-www-gariany-com.talkyard.net"
+  talkyardScriptUrl = "/js/talkyard-comments.min.js"
+
 [permalinks]
   posts = "/:year/:month/:title/"
 
