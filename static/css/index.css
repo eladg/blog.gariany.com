@@ -155,7 +155,7 @@ figure {
   display: block;
   right: 0;
   width: 100%;
-  margin-left: 24em;
+  /*margin-left: 24em;*/
 }
 
 .posts-list {
@@ -243,8 +243,8 @@ article {
   max-width: 1032px;
   min-height: 800px;
 
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 3em;
+  margin-left: 3em;
   margin-top: 3em;
   margin-bottom: 9em;
 
@@ -297,7 +297,7 @@ article {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/img/cover.png');
+  background-image: url('/img/cover2.png');
   opacity: 0.33;
 }
 
