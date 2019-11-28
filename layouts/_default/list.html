@@ -1,7 +1,7 @@
 {{ define "main" }}
 
   {{ $baseUrl := .Site.BaseURL }}
-  
+
   <article class="list">
 
     <div>
@@ -12,7 +12,7 @@
     <ul class="posts-list">
       {{ range $index, $element := .Paginator.Pages }}
         <li class="posts-list-item">
-
+          >
           {{ if (isset .Params "external_url")}}
             <a href="{{ .Params.external_url }}" target="_blank">{{ .Title }} {{ partial "external_url_icon.html" }}</a>
           {{ else }}
@@ -22,7 +22,7 @@
           <div>
             <span class="posts-list-item-description">
               Published at: {{ .PublishDate.Format "Jan 2, 2006" }}
-      
+
               posted under:
 
                 {{ range $key, $value := .Params.tags }}
@@ -35,7 +35,7 @@
     </ul>
 
     {{ partial "pagination.html" $ }}
-    
+
   </article>
 
 {{ end }}

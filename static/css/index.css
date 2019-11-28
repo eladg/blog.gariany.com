@@ -100,23 +100,6 @@ hr {
   Layout Classes
 ******************************************************************************/
 
-.notification {
-  display: flex; 
-  width: 100%;
-  text-align: center; 
-  color: white; 
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
-  background-color: rgba(178, 27, 50, 0.8);
-  /*position: fixed; */
-  top: 0px;
-}
-
-.notification p {
-  max-width: 75%;
-}
-
 .header {
   padding-top: 3.5em;
 }
@@ -132,11 +115,11 @@ hr {
 
 .sidebar {
   position: fixed;
-  background: #000;
+  background-color: #000000;
 
   top: 0;
   left: 0;
-  width: 27em;
+  width: 24em;
   height: 100%;
 }
 
@@ -228,7 +211,7 @@ hr {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .pagination-item {
@@ -288,21 +271,13 @@ article {
   padding: 3em;
 }
 
-.video-background {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .sidebar-background {
   z-index: -1;
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/img/cover2.png');
+  background-image: url('/img/cover.png');
   opacity: 0.33;
 }
 
@@ -322,7 +297,7 @@ article {
 .header-title .tagline {
   font-family: monospace;
   text-align: left;
- 
+
   line-height: 0.88;
   font-weight: 400;
   color: #a0a0a0;
@@ -365,14 +340,14 @@ article {
   color: #DF2D4F;
   font-size: 24px;
   font-family: monospace;
-  text-decoration: none;  
+  text-decoration: none;
   line-height: 24px;
 }
 
 .category-list li a:hover, li a:focus,
-.tags-list li a:hover, li a:focus, 
+.tags-list li a:hover, li a:focus,
 .recent-posts li a:hover, li a:focus {
-  color: #ffffff;  
+  color: #ffffff;
 }
 
 img {
@@ -449,10 +424,10 @@ ol {
   }
 
   .header-title .category-list li {
-    display: inline-block;    
+    display: inline-block;
   }
 
-  .header-title .category-list li a, 
+  .header-title .category-list li a,
   .header-title .tags-list li a {
     font-size: 24px;
   }
@@ -489,7 +464,7 @@ ol {
 
   article img {
     width: 100%;
-  }  
+  }
 }
 
 

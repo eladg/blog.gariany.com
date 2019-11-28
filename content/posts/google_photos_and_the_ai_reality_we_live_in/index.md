@@ -1,7 +1,8 @@
 ---
-title: "Google Photos and The AI Reality We Currently Live In"
+title: "The Case Against Google Photos"
 date: 2019-03-26T15:47:28+02:00
 categories: ["writings"]
+tags: ["opinion", "blog"]
 ---
 
 # Google Photos and The AI Reality We Currently Live In

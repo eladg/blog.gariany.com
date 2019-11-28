@@ -6,11 +6,10 @@
 
         {{ if isset .Params "static" }}
         {{ else }}
-          <div class="post-header">
-            {{ .Date.Format "January 2, 2006" }} &nbsp;
-            {{ .ReadingTime }}min read
+          <div class="posts-list-item-description">
+            {{ partial "date_clock_icon.html" }} {{ .Date.Format "January 2, 2006" }} &nbsp;
             <hr style="margin-top: 1em; margin-bottom: 1em;">
-          </div>        
+          </div>
         {{ end }}
 
         <div class="post-content">
@@ -19,7 +18,7 @@
       </div>
     </div>
 
-    {{ if isset .Params "dont_show_comments" }} 
+    {{ if isset .Params "dont_show_comments" }}
     {{ else }}
       {{ partial "comments.html" }}
     {{ end }}

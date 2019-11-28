@@ -1,6 +1,6 @@
 
 ---
-title: "Sketch Music: Groove Idea (2nd draft)"
+title: "Music: Groove Idea"
 date: "2015-08-04T00:00:00Z"
 lastmod: "2015-08-04T00:00:00Z"
 author: "Elad Gariany"
