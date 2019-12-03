@@ -1,0 +1,12 @@
+{{ $baseUrl := .Site.BaseURL }}
+
+<div style="background: black;">
+  <div class="navigation-container">
+    <!-- tags list -->
+    {{ partial "sidebar/tags.html" . }}
+  </div>
+
+  <div>
+    {{ partial "sidebar/social.html" . }}
+  </div>
+</div>

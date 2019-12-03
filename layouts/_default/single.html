@@ -1,13 +1,13 @@
 {{ define "main" }}
 
-  <article>
+  <article class="post">
     <div class="card">
       <div class="card-body">
 
-        {{ if isset .Params "static" }}
+        {{ if isset .Params "is_site_static_page" }}
         {{ else }}
           <div class="posts-list-item-description">
-            {{ partial "date_clock_icon.html" }} {{ .Date.Format "January 2, 2006" }} &nbsp;
+            {{ partial "icons/date_clock_icon.html" }} {{ .Date.Format "January 2, 2006" }} &nbsp;
             <hr style="margin-top: 1em; margin-bottom: 1em;">
           </div>
         {{ end }}
@@ -20,7 +20,7 @@
 
     {{ if isset .Params "dont_show_comments" }}
     {{ else }}
-      {{ partial "comments.html" }}
+      {{ partial "article/comments.html" }}
     {{ end }}
 
   </article>

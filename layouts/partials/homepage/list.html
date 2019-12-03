@@ -1,0 +1,27 @@
+{{ $baseUrl := .Site.BaseURL }}
+
+<div class="row">
+  <div class="col-xs">
+
+    <hr>
+
+    <span style="font-size: 26px; font-weight: 600;">Recent Posts</span>
+
+      {{ range .Data.Pages.GroupByDate "2006" -}}
+      <ul class="posts-list">
+
+        <div class="posts-title site-date-catalog">{{ .Key }}</div>
+
+          {{ range .Pages -}}
+
+            {{ if not .Params.is_site_static_page }}
+
+              {{ partial "list/item.html" . }}
+
+            {{ end }}
+          {{ end }}
+      </ul>
+      {{ end }}
+
+  </div>
+</div>

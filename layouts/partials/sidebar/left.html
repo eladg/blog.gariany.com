@@ -44,16 +44,10 @@
       <!-- category list -->
 
       {{ if not .IsHome }}
-        {{ partial "list-categories.html" . }}
+        {{ partial "sidebar/categories.html" . }}
       {{ end }}
 
-      <!-- tags list -->
-      {{ if .IsHome }}
-        {{ partial "list-tags.html" . }}
-      {{ end }}
     </div>
-
-    {{ partial "list-social.html" . }}
 
   </div>
 </div>

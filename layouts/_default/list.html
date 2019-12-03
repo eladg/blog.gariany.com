@@ -1,36 +1,16 @@
 {{ define "main" }}
 
-  {{ $baseUrl := .Site.BaseURL }}
-
   <article class="list">
 
     <div>
-      <div class="posts-title">{{ .Type | humanize }}: {{ .Title | humanize }}</div>
-      <hr style="margin-bottom: 2em;">
+      <div class="posts-title">{{ .Type | humanize | title }}: {{ .Title | humanize | title}}</div>
     </div>
 
     <ul class="posts-list">
-      {{ range $index, $element := .Paginator.Pages }}
-        <li class="posts-list-item">
-          >
-          {{ if (isset .Params "external_url")}}
-            <a href="{{ .Params.external_url }}" target="_blank">{{ .Title }} {{ partial "external_url_icon.html" }}</a>
-          {{ else }}
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          {{ end }}
+      {{ range $index, $page := .Paginator.Pages }}
 
-          <div>
-            <span class="posts-list-item-description">
-              Published at: {{ .PublishDate.Format "Jan 2, 2006" }}
+        {{ partial "list/item.html" $page }}
 
-              posted under:
-
-                {{ range $key, $value := .Params.tags }}
-                  <a class="posts-list-tags" href="{{ $baseUrl }}tags/{{ . }}">#{{ $value | humanize }}</a>
-                {{ end }}
-            </span>
-          </div>
-        </li>
       {{ end }}
     </ul>
 

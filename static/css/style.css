@@ -109,10 +109,6 @@ hr {
   position: absolute;
 }
 
-.container {
-  display: flex;
-}
-
 .sidebar {
   position: fixed;
   background-color: #000000;
