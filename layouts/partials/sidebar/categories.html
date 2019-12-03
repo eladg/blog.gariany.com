@@ -2,6 +2,6 @@
 
 <div class="category-list">
   {{ range $key, $value := .Site.Taxonomies.categories }}
-    <li><a href="{{ $baseUrl }}categories/{{ $key | urlize  }}">/{{ $key | humanize | lower}}</a></li>
+    <li><a href="{{ $baseUrl }}categories/{{ $key | urlize  }}/index.html">/{{ $key | humanize | lower}}</a></li>
   {{ end }}
 </div>

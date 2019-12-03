@@ -146,6 +146,7 @@ hr {
   display: inline-grid;
   list-style-type: none;
   width: 100%;
+  padding-left: 0;
 }
 
 .posts-title {

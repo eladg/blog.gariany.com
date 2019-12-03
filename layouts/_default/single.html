@@ -4,13 +4,7 @@
     <div class="card">
       <div class="card-body">
 
-        {{ if isset .Params "is_site_static_page" }}
-        {{ else }}
-          <div class="posts-list-item-description">
-            {{ partial "icons/date_clock_icon.html" }} {{ .Date.Format "January 2, 2006" }} &nbsp;
-            <hr style="margin-top: 1em; margin-bottom: 1em;">
-          </div>
-        {{ end }}
+        {{ partial "article/header.html" . }}
 
         <div class="post-content">
           {{ .Content }}
