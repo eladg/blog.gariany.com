@@ -3,7 +3,7 @@ title: "About"
 date: 2019-01-01T09:00:00+00:00
 type: "page"
 dont_show_comments: true
-static: true
+is_site_static_page: true
 ---
 
 ## About
