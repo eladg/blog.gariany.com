@@ -6,15 +6,25 @@
   {{- partial "html-head.html" . -}}
 
   <body>
-    <div class="container">
+    <div class="row">
 
-      <div class="sidebar">
-        {{ partial "sidebar/left.html" . }}
+      <div class="col-xs-2">
+        <div class="sidebar-left">
+          {{ partial "sidebar/left.html" . }}
+        </div>
       </div>
 
-      <div class="content">
-        {{- block "main" . -}}
-        {{- end -}}
+      <div class="col-xs-8">
+        <div class="content">
+          {{- block "main" . -}}
+          {{- end -}}
+        </div>
+      </div>
+
+      <div class="col-xs-2">
+        <div class="sidebar-right">
+          {{ partial "sidebar/right.html" . }}
+        </div>
       </div>
 
     </div>

@@ -41,25 +41,8 @@
     </div>
 
     <div class="navigation-container">
-      <!-- category list -->
-
-      {{ if not .IsHome }}
-        {{ partial "sidebar/categories.html" . }}
-      {{ end }}
-
+      {{ partial "sidebar/categories.html" . }}
     </div>
 
   </div>
 </div>
-
-<script type="text/javascript">
-
-window.onscroll = function() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("sidebar-background").className = "sidebar-background sidebar-hide";
-  } else {
-    document.getElementById("sidebar-background").className = "sidebar-background";
-  }
-}
-
-</script>

@@ -1,6 +1,9 @@
 {{ $baseUrl := .Site.BaseURL }}
 
-<div style="background: black;">
+<div>
+  <div id="sidebar-background" class="sidebar-background">
+  </div>
+
   <div class="navigation-container">
     <!-- tags list -->
     {{ partial "sidebar/tags.html" . }}

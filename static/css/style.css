@@ -109,12 +109,22 @@ hr {
   position: absolute;
 }
 
-.sidebar {
+.sidebar-left {
   position: fixed;
   background-color: #000000;
 
   top: 0;
   left: 0;
+  width: 24em;
+  height: 100%;
+}
+
+.sidebar-right {
+  position: fixed;
+  background-color: #000000;
+
+  top: 0;
+  right: 0;
   width: 24em;
   height: 100%;
 }
@@ -139,7 +149,7 @@ hr {
   display: block;
   right: 0;
   width: 100%;
-  margin-left: 24em;
+  margin-left: 7em;
 }
 
 .posts-list {
@@ -401,13 +411,17 @@ ol {
 }
 
 @media screen and (max-width: 1030px) {
-  .sidebar {
+  .sidebar-left {
     position: fixed;
     background: #000000;
     top: 0;
     width: 100%;
     height: 6em;
     z-index: 2;
+  }
+
+  .sidebar-right {
+    display: none;
   }
 
   .header-title {
