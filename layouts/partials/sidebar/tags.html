@@ -2,6 +2,6 @@
 
 <div class="tags-list" >
   {{ range $key, $value := .Site.Taxonomies.tags }}
-    <li><a href="{{ $baseUrl }}tags/{{ $key | urlize  }}">#{{ $key | lower }}</a></li>
+    <li><a href="{{ $baseUrl }}tags/{{ $key | urlize  }}/index.html">#{{ $key | lower }}</a></li>
   {{ end }}
 </div>
