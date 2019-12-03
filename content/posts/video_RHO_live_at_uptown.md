@@ -2,7 +2,7 @@
 title: "Video: The Rabbit Hole Orchestra - Live at The Uptown, Oakland"
 date: 2017-12-21T08:00:00+00:00
 categories: ["video"]
-tags: ["video", "the rabbit hole orchestra"]
+tags: ["video", "the-rabbit-hole-orchestra"]
 ---
 
 ## Video: The Rabbit Hole Orchestra - Live at The Uptown, Oakland
