@@ -12,7 +12,7 @@ echo ""
 echo "================================================================================"
 echo "Deploying to s3..."
 echo "================================================================================"
-aws --profile aws_gariany s3 sync --delete ../public s3://gariany.com
+cd ../public && aws --profile aws_gariany s3 sync . s3://gariany.com && cd ../scripts
 echo "================================================================================"
 echo ""
 echo ""
