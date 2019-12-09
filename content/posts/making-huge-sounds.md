@@ -1,5 +1,5 @@
 ---
-title: "Making Huge Sounds"
+title: "Talk: Making Huge Sounds"
 date: 2019-11-24T18:47:08+01:00
 author: "Elad Gariany"
 tags: ["presentation", "sound", "opinion"]
