@@ -8,7 +8,8 @@ baseURL = "https://www.gariany.com/"
   #Favicon for site
   favicon = "/favicon.ico"
   talkyardServerUrl = "https://comments-for-www-gariany-com.talkyard.net"
-  talkyardScriptUrl = "/js/talkyard-comments.min.js"
+  # talkyardScriptUrl = "/js/talkyard-comments.min.js"
+  talkyardScriptUrl = "https://c1.ty-cdn.net/-/talkyard-comments.min.js"
 
 [permalinks]
   posts = "/:year/:month/:title/"

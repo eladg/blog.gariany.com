@@ -14,7 +14,7 @@
 
     {{ if isset .Params "dont_show_comments" }}
     {{ else }}
-      {{ partial "article/comments.html" }}
+      {{ partial "article/comments.html" . }}
     {{ end }}
 
   </article>
