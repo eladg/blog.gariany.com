@@ -1,7 +1,7 @@
 ---
 title: "רואים רק כחול"
 date: 2019-12-05T06:20:10+01:00
-categories: ["writing"]
+categories: ["writings"]
 tags: ["hebrew", "sketch", "spoken-words"]
 ---
 

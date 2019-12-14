@@ -1,11 +1,12 @@
 ---
-title: "The Case Against Google Photos"
+title: "Opinion: The Case Against Google Photos"
 date: 2019-03-26T15:47:28+02:00
 categories: ["writings"]
 tags: ["opinion", "blog"]
+discussionId: "2019-03-26-Google-Photos"
 ---
 
-# Google Photos and The AI Reality We Currently Live In
+# Google Photos and The AI Reality We Currently Live In. My Case Against "Google Photos"
 
 {{< figure src="cover.png" title="Humanity in the age of #AIReality" >}}
 

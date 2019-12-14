@@ -6,6 +6,7 @@ lastmod: "2015-08-04T00:00:00Z"
 author: "Elad Gariany"
 tags: ["sketch", "audio", "soundcloud"]
 categories: ["music"]
+discussionId: "music-groove-idea"
 ---
 
 ## Music: Elad Gariany - Groove Idea
