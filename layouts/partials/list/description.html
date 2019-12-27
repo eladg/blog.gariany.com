@@ -4,7 +4,7 @@
   Published at: {{ .PublishDate.Format "Jan 2, 2006" }}
 
   posted under:
-
+	
     {{ range $key, $value := .Params.tags }}
       <a class="posts-list-tags" href="{{ $baseUrl }}tags/{{ . }}/index.html">#{{ $value }}</a>
     {{ end }}

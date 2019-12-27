@@ -1,9 +1,9 @@
 {{ $baseUrl := .Site.BaseURL }}
 
-<div class="row">
-  <div style="margin-bottom: 3em; margin-top: 3em;">
-    <div class="row center-xs">
-      <div class="col-xs-6">
+<div class="row" style="display: flex;justify-content: center;border-bottom: 2px dotted #ddd;">
+  <div style="padding-bottom: 3em; padding-top: 3em;">
+    <div class="row center-xs bio-wrapper">
+      <div class="">
         <div class="box">
           <a href="{{ $baseUrl }}/about/index.html"><img class="avatar" src="{{ $baseUrl }}img/avatar.png" alt="Avatar"></a>
         </div>
@@ -12,16 +12,17 @@
 
     <div class="row center-xs">
       <div class="col-xs-12">
-        <div class="box">
-          <span style="font-size: 28px;">Elad Gariany</span>
+        <div class="box bio_title">
+          <span>Elad Gariany</span>
         </div>
       </div>
     </div>
 
     <div class="row center-xs">
       <div class="col-xs-12">
-        <div class="box">
-          <span>I'm an Artist, Coder & Music composer. I create every day and use this space to share it. <a href="/about/index.html">About me</a></span>
+        <div class="box bio_description">
+          <span>I'm an Artist, Coder & Music composer. I create every day and use this space to share it. </span><br><br>
+          <a href="/about/index.html">About Me</a>
         </div>
       </div>
     </div>

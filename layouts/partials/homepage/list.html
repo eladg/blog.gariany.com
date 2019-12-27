@@ -1,9 +1,9 @@
 {{ $baseUrl := .Site.BaseURL }}
 
-<div class="row">
-  <div class="col-xs">
+<div class="row" style="padding-top: 10%;">
+  <div class="col-xs" style="display: flex;justify-content: center;flex-wrap: wrap;">
 
-    <span style="font-size: 26px; font-weight: 600;">Recent Posts</span>
+    <span class="recentPost_title" style="width: 100%;">Recent Posts</span>
 
       {{ range .Data.Pages.GroupByDate "2006" -}}
       <ul class="posts-list">

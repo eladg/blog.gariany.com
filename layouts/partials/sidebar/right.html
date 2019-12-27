@@ -4,12 +4,9 @@
   <div id="sidebar-background" class="sidebar-background">
   </div>
 
-  <div class="navigation-container">
-    <!-- tags list -->
-    {{ partial "sidebar/tags.html" . }}
-  </div>
 
-  <div>
+  <div class="right-sidebar-wrapper">
+    {{ partial "sidebar/tags.html" . }}
     {{ partial "sidebar/social.html" . }}
   </div>
 </div>

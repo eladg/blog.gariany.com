@@ -6,7 +6,50 @@
 
   <div class="header-title">
 
-    {{ if not .IsHome }}
+      <div class="card1">
+         <div class="card__image-container">
+              {{ if not .IsHome }}
+                    <a href="{{ $baseUrl }}">
+                      <img class="card__image" src="{{ $baseUrl }}img/avatar.png" alt="Avatar">
+                    </a>
+              {{ end }}
+        </div>
+
+         <div class="card__content">
+           {{ if .IsHome }}
+             <h1 class="card__title"></h1>
+          {{ else }}
+             <h1 class="card__title" style="font-size: 46px; margin: 0; font-family: gabriola">Elad Gariany</h1>
+          {{ end }}
+           {{ if not .IsHome }}
+            <p style="font-size: 21px; margin: 0; text-align: center;">
+              Hi I'm Elad, entrepreneur, artist and software engineer based in the San Francisco Bay Area.
+            </p>
+            {{ end }}
+        </div>
+        <div id='cssmenu'>
+            <ul class="show-on-mobile">
+                <li class='active has-sub'><a href='#'><span><i class="fa fa-bars"></i></span></a>
+                    <ul style="background: rgb(51, 51, 51); padding: 10px 0px; border-radius: 10px;">
+                       <li><a href='/about/index.html'><span>About</span></a></li>
+                       <li class='last'><a href='/contact/index.html'><span>Write To Me</span></a></li>
+                          {{ partial "sidebar/categories.html" . }}
+                       </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="show-on-desktop">
+               <li style="border-bottom: 1px solid"><a href='/about/index.html'><span>About</span></a></li>
+               <li class='last' style="margin-bottom: 1rem; border-bottom: 1px solid"><a href='/contact/index.html'><span>Write To Me</span></a></li>
+                <ul style="display: block">
+                  {{ partial "sidebar/categories.html" . }}
+                </ul>
+               </li>
+            </ul>
+          </div>
+        </div>
+
+    <!-- {{ if not .IsHome }}
 
     <div class="avatar-container">
       <a href="{{ $baseUrl }}">
@@ -14,17 +57,17 @@
       </a>
     </div>
 
-    {{ end }}
+    {{ end }} -->
 
-    <div class="title-container">
+    <!-- <div class="title-container">
       {{ if .IsHome }}
         <span class="title"></span>
       {{ else }}
         <span class="title">Elad Gariany</span>
       {{ end }}
-    </div>
+    </div> -->
 
-    <div class="tagline-container">
+    <!-- <div class="tagline-container">
 
       {{ if not .IsHome }}
 
@@ -38,11 +81,13 @@
         <p class="sidebar-btn"><a href="/about/index.html">About</a></p>
         <p class="sidebar-btn"><a href="/contact/index.html">Write To Me</p>
       </div>
-    </div>
+    </div> -->
 
-    <div class="navigation-container">
+
+
+    <!-- <div class="navigation-container">
       {{ partial "sidebar/categories.html" . }}
-    </div>
+    </div> -->
 
   </div>
 </div>
