@@ -1,7 +1,7 @@
 {{ $baseUrl := .Site.BaseURL }}
 
-<div class="category-list">
+<!-- <div class="category-list"> -->
   {{ range $key, $value := .Site.Taxonomies.categories }}
-    <li><a href="{{ $baseUrl }}categories/{{ $key | urlize  }}/index.html">/{{ $key | humanize | lower}}</a></li>
+    <li><a style="text-transform: capitalize;" href="{{ $baseUrl }}categories/{{ $key | urlize  }}/index.html">/{{ $key | humanize | lower}}</a></li>
   {{ end }}
-</div>
+<!-- </div> -->

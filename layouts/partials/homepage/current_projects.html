@@ -1,19 +1,19 @@
 {{ $baseUrl := .Site.BaseURL }}
 
-<div>
-  <div class="row start-xs">
-    <h3>My Current Projects:</h3>
+<div class="current_projects_wrapper">
+  <div class="current_projects_title">
+    <span class="project_title">My Current Projects</span>
   </div>
 
-  <div class="row">
+  <div class="row current_projects_images">
     <div class="center-xs">
-      <a href="https://polyversemusic.com"><img src="{{ $baseUrl }}img/polyversemusic.png" style="width: 250px; min-width: 0;"></a>
+      <a href="https://polyversemusic.com"><img src="{{ $baseUrl }}img/polyversemusic.png"></a>
     </div>
     <div class="center-xs">
-      <a href="http://www.sound.camp"><img src="{{ $baseUrl }}img/soundcamp.png" style="width: 250px; min-width: 0;"></a>
+      <a href="http://www.sound.camp"><img src="{{ $baseUrl }}img/soundcamp.png"></a>
     </div>
     <div class="center-xs">
-      <a href="http://www.therabbitholeorchestra.com"><img src="{{ $baseUrl }}img/rho.png" style="width: 250px; min-width: 0;"></a>
+      <a href="http://www.therabbitholeorchestra.com"><img src="{{ $baseUrl }}img/rho.png"></a>
     </div>
   </div>
 </div>
